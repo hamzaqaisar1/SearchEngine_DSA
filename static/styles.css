@@ -1,0 +1,78 @@
+
+body,html{
+height: 100%;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+main .container{
+margin-bottom: 4em;
+}
+.cards{
+padding: 2em;
+display:flex;
+flex-direction:column;
+}
+.cards .card{
+padding:2em;
+
+}
+.card button{
+display:flex;
+flex-direction: column;
+}
+.searchbar{
+margin-bottom: auto;
+margin-top: auto;
+height: 60px;
+background-color: #353b48;
+border-radius: 30px;
+padding: 10px;
+}
+.error{
+    color:#ff0000;
+    
+}
+.search_input{
+color: white;
+border: 0;
+outline: 0;
+background: none;
+width: 0;
+caret-color:transparent;
+line-height: 40px;
+height: 100px;
+transition: width 0.3s linear;
+}
+
+.searchbar:hover > .search_input{
+padding: 0 10px;
+width: 700px;
+caret-color:red;
+transition: width 0.3s linear;
+}
+
+.searchbar:hover > .search_icon{
+background: white;
+color: #e74c3c;
+}
+
+.search_icon{
+height: 40px;
+background-color: black;
+border: none;
+width: 40px;
+float: right;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+color:white;
+text-decoration:none;
+}
+div.container{
+margin-top: 50px;
+}
+.inner{
+    background-color: black;
+}

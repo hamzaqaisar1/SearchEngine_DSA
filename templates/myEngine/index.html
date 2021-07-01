@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Search Engine{% endblock %}
+{% block content %}
+<div class="error">{{error}}</div>
+
+<div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+      <form action="" method="POST" class="searchbar">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+</div>
+
+<div class="cards searchResults">
+  {% for result in results %}
+  <div class="card result">
+    <h1 class="title">{{result.title}}</h1>
+    <h2 class="author">{{result.author}}</h2>
+    <div class="content">
+      <p>
+        {{result.text}}
+      </p>
+    </div>
+    <a href="{{result.url}}" class="btn btn-danger">Read More</a>
+  </div>
+  {% endfor %}
+</div>
+
+<script>
+    window.onload = function(){
+        document.querySelector('.searchbar #id_your_query').classList.add("search_input");
+        document.querySelector('.searchbar #id_your_query').classList.add("h-100");
+        $('.searchbar #id_your_query').attr("placeholder","Search...");
+    }
+</script>
+{% endblock %}
